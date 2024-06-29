@@ -1,0 +1,20 @@
+/* slider.css */
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(234 179 8 / var(--tw-bg-opacity))!important;
+}
+
+.slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus {
+  color: #ff8c00 !important; /* Warna oren lebih gelap saat hover atau focus */
+}
+
+.slick-dots li button:before {
+  color: rgb(234 179 8 / var(--tw-bg-opacity)) !important; /* Warna oren untuk titik */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff8c00 !important; /* Warna oren lebih gelap untuk titik aktif */
+}
