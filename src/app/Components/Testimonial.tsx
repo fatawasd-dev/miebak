@@ -83,7 +83,7 @@ const Testimonials: React.FC = () => {
                     className="mx-auto rounded-full h-24 w-24 object-cover mb-4"
                   />
                   <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
-                  <p className="text-gray-600 mb-4">"{testimonial.review}"</p>
+                  <p className="text-gray-600 mb-4">&quot;{testimonial.review}&quot;</p>
                 </div>
               </div>
             ))}
