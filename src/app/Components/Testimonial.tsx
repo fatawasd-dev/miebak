@@ -12,19 +12,19 @@ const Testimonials: React.FC = () => {
       id: 1,
       name: "Andi",
       review: "Martabak Indomie sangat lezat! Kombinasi mi dan telur benar-benar sempurna.",
-      image: "/logo_hero.jpeg",
+      image: "/orang_1.png",
     },
     {
       id: 2,
       name: "Budi",
       review: "Rasa yang unik dan tidak pernah saya temui sebelumnya. Harus dicoba!",
-      image: "/logo_hero.jpeg",
+      image: "/orang_2.png",
     },
     {
       id: 3,
       name: "Citra",
       review: "Martabak Indomie menjadi makanan favorit saya. Sangat direkomendasikan!",
-      image: "/logo_hero.jpeg",
+      image: "/orang_3.png",
     },
     // tambahkan lebih banyak testimoni sesuai kebutuhan
   ];

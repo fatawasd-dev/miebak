@@ -23,7 +23,7 @@ const Menu: React.FC = () => {
       description:
         "Martabak dengan mi Indomie, telur, keju parut, dan bumbu spesial.",
       price: "Rp 30.000",
-      image: "/logo_hero.jpeg",
+      image: "/menu_1.png",
     },
     {
       id: 3,
@@ -31,31 +31,15 @@ const Menu: React.FC = () => {
       description:
         "Martabak dengan mi Indomie, telur, daging cincang, sayuran, dan bumbu spesial.",
       price: "Rp 35.000",
-      image: "/logo_hero.jpeg",
+      image: "/menu_2.png",
     },
     {
       id: 4,
-      name: "Martabak Indomie Spesial",
+      name: "Martabak Indomie Sosis",
       description:
         "Martabak dengan mi Indomie, telur, daging cincang, sayuran, dan bumbu spesial.",
-      price: "Rp 35.000",
-      image: "/logo_hero.jpeg",
-    },
-    {
-      id: 5,
-      name: "Martabak Indomie Spesial",
-      description:
-        "Martabak dengan mi Indomie, telur, daging cincang, sayuran, dan bumbu spesial.",
-      price: "Rp 35.000",
-      image: "/logo_hero.jpeg",
-    },
-    {
-      id: 6,
-      name: "Martabak Indomie Spesial",
-      description:
-        "Martabak dengan mi Indomie, telur, daging cincang, sayuran, dan bumbu spesial.",
-      price: "Rp 35.000",
-      image: "/logo_hero.jpeg",
+      price: "Rp 25.000",
+      image: "/menu_3.png",
     },
     // tambahkan menu lainnya sesuai kebutuhan
   ];
