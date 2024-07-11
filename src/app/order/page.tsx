@@ -17,7 +17,7 @@ const menuItems = [
     description:
       "Martabak dengan mi Indomie, telur, keju parut, dan bumbu spesial.",
     price: 30000,
-    image: "/logo_hero.jpeg",
+    image: "/menu_1.png",
   },
   {
     id: 3,
@@ -25,13 +25,21 @@ const menuItems = [
     description:
       "Martabak dengan mi Indomie, telur, daging cincang, sayuran, dan bumbu spesial.",
     price: 35000,
-    image: "/logo_hero.jpeg",
+    image: "/menu_2.png",
   },
-  // Tambahkan item menu lainnya sesuai kebutuhan
+  {
+    id: 4,
+    name: "Martabak Indomie Sosis",
+    description:
+      "Martabak dengan mi Indomie, telur, daging cincang, sayuran, dan bumbu spesial.",
+    price: 25000,
+    image: "/menu_3.png",
+  },
+  // tambahkan menu lainnya sesuai kebutuhan
 ];
 
 const OrderPage: React.FC = () => {
-  const [cart, setCart] = useState<any>([]);
+  const [cart, setCart] = useState<any[]>([]);
   const [quantities, setQuantities] = useState(
     menuItems.reduce((acc: any, item: any) => {
       acc[item.id] = 1;
@@ -69,6 +77,12 @@ const OrderPage: React.FC = () => {
       (total: any, item: any) => total + item.price * item.quantity,
       0
     );
+  };
+
+  const handleOrder = () => {
+    const orderDetails = cart.map(item => `- ${item.quantity} ${item.name}`).join('%0A');
+    const whatsappUrl = `https://wa.me/6281323230401?text=Halo%20admin%20miebak,%20saya%20mau%20order:%0A${orderDetails}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -111,36 +125,38 @@ const OrderPage: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="w-1/3 bg-white rounded-lg shadow-md p-4 flex flex-col justify-between">
-          <div className="flex-grow overflow-auto">
-            <h2 className="text-2xl font-bold mb-4">Keranjang</h2>
-            {cart.length === 0 ? (
-              <p className="text-gray-700">Keranjang kosong.</p>
-            ) : (
-              <ul>
-                {cart.map((item: any, index: any) => (
-                  <li key={index} className="flex justify-between items-center mb-4">
-                    <div>
-                      <h3 className="text-lg font-semibold">{item.name}</h3>
-                      <p className="text-gray-700">Rp {item.price}</p>
-                      <p className="text-gray-700">Jumlah: {item.quantity}</p>
-                    </div>
-                    <button
-                      onClick={() => removeFromCart(index)}
-                      className="text-red-500 hover:text-red-700"
-                    >
-                      Hapus
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-          <div className="sticky bottom-0 bg-white p-4">
-            <h3 className="text-xl font-bold">Total: Rp {calculateTotal()}</h3>
-            <button className="bg-green-500 text-white py-2 px-4 rounded mt-4 w-full hover:bg-green-600">
-              Pesan Sekarang
-            </button>
+        <div className="w-1/3">
+          <div className="bg-white rounded-lg shadow-md p-6 sticky top-8 z-40 m-5">
+            <div className="flex-grow overflow-auto">
+              <h2 className="text-2xl font-bold mb-4">Keranjang</h2>
+              {cart.length === 0 ? (
+                <p className="text-gray-700">Keranjang kosong.</p>
+              ) : (
+                <ul>
+                  {cart.map((item, index) => (
+                    <li key={index} className="flex justify-between items-center mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold">{item.name}</h3>
+                        <p className="text-gray-700">Rp {item.price}</p>
+                        <p className="text-gray-700">Jumlah: {item.quantity}</p>
+                      </div>
+                      <button
+                        onClick={() => removeFromCart(index)}
+                        className="text-red-500 hover:text-red-700"
+                      >
+                        Hapus
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+            <div className="bg-white p-4 mt-4 sticky bottom-0 z-50">
+              <h3 className="text-xl font-bold">Total: Rp {calculateTotal()}</h3>
+              <button disabled={cart.length === 0} className={`bg-green-500 text-white py-2 px-4 rounded mt-4 w-full hover:bg-green-600 ${cart.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`} onClick={() => handleOrder()}>
+                Pesan Sekarang
+              </button>
+            </div>
           </div>
         </div>
       </main>

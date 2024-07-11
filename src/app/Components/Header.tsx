@@ -52,27 +52,27 @@ const Header: React.FC = () => {
         <nav className={`lg:hidden absolute top-0 left-0 w-64 bg-white shadow-md transform transition-transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} z-40`}>
           <ul className="pt-4">
             <li>
-              <Link href="#">
+              <Link href="/#">
                 <span onClick={toggleMenu} className="block py-2 px-6 text-gray-700 hover:text-gray-900">Beranda</span>
               </Link>
             </li>
             <li>
-              <Link href="#menu">
+              <Link href="/#menu">
                 <span onClick={toggleMenu} className="block py-2 px-6 text-gray-700 hover:text-gray-900">Menu</span>
               </Link>
             </li>
             <li>
-              <Link href="#about">
+              <Link href="/#about">
                 <span onClick={toggleMenu} className="block py-2 px-6 text-gray-700 hover:text-gray-900">Tentang Kami</span>
               </Link>
             </li>
             <li>
-              <Link href="#testimonials">
+              <Link href="/#testimonials">
                 <span onClick={toggleMenu} className="block py-2 px-6 text-gray-700 hover:text-gray-900">Testimoni</span>
               </Link>
             </li>
             <li>
-              <Link href="#contact">
+              <Link href="/#contact">
                 <span onClick={toggleMenu} className="block py-2 px-6 text-gray-700 hover:text-gray-900">Kontak</span>
               </Link>
             </li>
@@ -82,27 +82,27 @@ const Header: React.FC = () => {
         <nav className="hidden lg:block">
           <ul className="flex space-x-4">
             <li>
-              <Link href="#">
+              <Link href="/#">
                 <span className="text-gray-700 hover:text-gray-900">Beranda</span>
               </Link>
             </li>
             <li>
-              <Link href="#menu">
+              <Link href="/#menu">
                 <span className="text-gray-700 hover:text-gray-900">Menu</span>
               </Link>
             </li>
             <li>
-              <Link href="#about">
+              <Link href="/#about">
                 <span className="text-gray-700 hover:text-gray-900">Tentang Kami</span>
               </Link>
             </li>
             <li>
-              <Link href="#testimonials">
+              <Link href="/#testimonials">
                 <span className="text-gray-700 hover:text-gray-900">Testimoni</span>
               </Link>
             </li>
             <li>
-              <Link href="#contact">
+              <Link href="/#contact">
                 <span className="text-gray-700 hover:text-gray-900">Kontak</span>
               </Link>
             </li>
